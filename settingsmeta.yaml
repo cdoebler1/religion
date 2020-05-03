@@ -7,6 +7,6 @@ skillMetadata:
           label: Set a religious preference for the AI
           name: religion
           type: select
-          label: religion
-          options: Dudeism|dudeism;Pastafarian|pastafarian
-          value: dudeism
+          label: Religion
+          options: Dudeism|dude;Pastafarianism|pasta
+          value: dude
