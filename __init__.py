@@ -1,18 +1,17 @@
 from mycroft import MycroftSkill, intent_file_handler
-import subprocess
 
 
-class SmallTalk(MycroftSkill):
+class Religion(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
 
-    @intent_file_handler('winston.about.intent')
-    def handle_winston_about(self, message):
-        self.speak_dialog('winston.about')
+    @intent_file_handler('religion.intent')
+    def handle_religion(self, message):
+        self.speak_dialog('religion')
 
     def stop(self):
         pass
 
 
 def create_skill():
-    return SmallTalk()
+    return Religion()

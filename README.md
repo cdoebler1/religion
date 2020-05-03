@@ -1,2 +1,2 @@
-# Winston.cdoebler
-This skill enhances the basic personality of the artificial intelligence.
+# Religion Module
+Incorporate religion into AI in order to create a friendly interface.
