@@ -5,9 +5,10 @@ class Religion(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
 
-    @intent_file_handler('religion.intent')
+    @intent_file_handler('god.intent')
     def handle_religion(self, message):
-        self.speak_dialog('religion')
+        religion = self.settings.get('religion', 'dude')
+        self.speak_dialog(religion + '.god')
 
     def stop(self):
         pass
