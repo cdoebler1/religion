@@ -1,12 +1,12 @@
-from mycroft import MycroftSkill, intent_file_handler
+from adapt.intent import IntentBuilder
+from mycroft import MycroftSkill, intent_handler
 
 
 class Religion(MycroftSkill):
-    def __init__(self):
-        MycroftSkill.__init__(self)
 
-    @intent_file_handler('god.intent')
-    def handle_religion(self, message):
+    @intent_handler(IntentBuilder('Doyoubelieveingod').require('believe').
+                    require('god'))
+    def handle_god(self, message):
         religion = self.settings.get('religion', 'dude')
         self.speak_dialog(religion + '.god')
 
