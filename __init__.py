@@ -13,7 +13,7 @@ class Religion(MycroftSkill):
     @intent_handler(IntentBuilder('ReciteDDC').require('recite').
                     require('ddc'))
     def handle_ddc(self, message):
-        self.speak_dialog("intro")
+        self.speak_dialog('intro')
         self.speak_dialog('ddc_1')
 
     def stop(self):
