@@ -10,6 +10,11 @@ class Religion(MycroftSkill):
         religion = self.settings.get('religion', 'dude')
         self.speak_dialog(religion + '.god')
 
+    @intent_handler(IntentBuilder('ReciteDDC').require('recite').
+                    require('ddc'))
+    def handle_ddc(self, message):
+        self.speak_dialog('ddc_1')
+
     def stop(self):
         pass
 
