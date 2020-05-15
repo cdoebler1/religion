@@ -14,7 +14,8 @@ class Religion(MycroftSkill):
                     require('ddc'))
     def handle_ddc(self, message):
         self.speak_dialog('intro')
-        self.speak('ddc_1.dialog')
+        file = open("ddc_1.dialog")
+        self.speak(file)
 
     def stop(self):
         pass
