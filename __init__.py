@@ -15,15 +15,16 @@ class Religion(MycroftSkill):
                     require('ddc'))
     def handle_ddc(self, message):
         self.speak_dialog('intro')
-        a = random.randint(1, 4)
-        with open('skills/religion.cdoebler1/dialog/en-us/ddc_' + str(a)
-                  + '.dialog') as file_object:
+        a = random.randint(1, 8)
+        with open('skills/religion.cdoebler1/dudeism/ddc_' + str(a)
+                  + '.txt') as file_object:
             book = file_object.read()
             self.speak("From the Dude de Ching, Verse " + str(a))
             self.speak(book)
 
     def stop(self):
         pass
+
 
 def create_skill():
     return Religion()
