@@ -19,7 +19,7 @@ class Religion(MycroftSkill):
         with open('skills/religion.cdoebler1/dialog/en-us/ddc_' + str(a)
                   + '.dialog') as file_object:
             book = file_object.read()
-            self.speak("From the Dude de Ching, Verse" + str(a))
+            self.speak("From the Dude de Ching, Verse " + str(a))
             self.speak(book)
 
     def stop(self):
