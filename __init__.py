@@ -1,5 +1,7 @@
 from adapt.intent import IntentBuilder
 from mycroft import MycroftSkill, intent_handler
+import random
+
 
 class Religion(MycroftSkill):
 
@@ -13,12 +15,17 @@ class Religion(MycroftSkill):
                     require('ddc'))
     def handle_ddc(self, message):
         self.speak_dialog('intro')
-        with open('skills/religion.cdoebler1/dialog/en-us/ddc_1.dialog') as file_object:
+        a = random.randrange(4)
+        with open('skills/religion.cdoebler1/dialog/en-us/ddc_' + a
+                  + '.dialog') as file_object:
             book = file_object.read()
             self.speak(book)
 
     def stop(self):
-        pass
+        # pass
+        if self.process and self.process.poll() is None:
+            self.process.terminate()
+            self.process.wait()
 
 
 def create_skill():
