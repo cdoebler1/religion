@@ -23,11 +23,7 @@ class Religion(MycroftSkill):
             self.speak(book)
 
     def stop(self):
-        # pass
-        if self.process and self.process.poll() is None:
-            self.process.terminate()
-            self.process.wait()
-
+        pass
 
 def create_skill():
     return Religion()
