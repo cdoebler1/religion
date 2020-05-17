@@ -16,7 +16,7 @@ class Religion(MycroftSkill):
     def handle_ddc(self, message):
         self.speak_dialog('intro')
         a = random.randrange(4)
-        with open('skills/religion.cdoebler1/dialog/en-us/ddc_' + a
+        with open('skills/religion.cdoebler1/dialog/en-us/ddc_' + str(a)
                   + '.dialog') as file_object:
             book = file_object.read()
             self.speak(book)
