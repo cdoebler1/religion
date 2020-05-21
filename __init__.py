@@ -15,7 +15,7 @@ class Religion(MycroftSkill):
                     require('ddc'))
     def handle_ddc(self, message):
         self.speak_dialog('intro')
-        a = random.randint(1, 8)
+        a = random.randint(1, 15)
         with open('skills/religion.cdoebler1/dudeism/ddc_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
