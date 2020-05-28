@@ -31,6 +31,8 @@ class Religion(MycroftSkill):
             a = w2n.word_to_num(a)
         except Exception:
             a = random.randint(1, 8)
+        if a < 1 or a > 8:
+            a = random.randint(1, 8)
         with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
