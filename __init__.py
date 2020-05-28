@@ -31,7 +31,7 @@ class Religion(MycroftSkill):
                   + '.txt') as file_object:
             book = file_object.read()
             self.speak("""From the Gospel of the Flying Spaghetti Monster,
-            I'd really rather you didn't"""
+            I'd really rather you didn't, number """
                        + str(a))
             self.speak(book)
 
