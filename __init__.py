@@ -1,5 +1,6 @@
 from adapt.intent import IntentBuilder
 from mycroft import MycroftSkill, intent_handler
+from word2number import w2n
 import random
 
 
@@ -27,6 +28,7 @@ class Religion(MycroftSkill):
     def handle_irrud(self, message):
         a = random.randint(1, 8)
         a = self.get_response('What verse would you like to hear?')
+        a = w2n.word_to_num(a)
         with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
