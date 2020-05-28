@@ -27,15 +27,15 @@ class Religion(MycroftSkill):
                     require('irrud'))
     def handle_irrud(self, message):
         a = self.get_response('What verse would you like to hear?')
-        if a == "all" or "everything":
+        if a == "all" or a == "everything":
             i = 1
             while i < 9:
-                with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
+                with open('skills/religion.cdoebler1/pasta/irrud_' + str(1)
                           + '.txt') as file_object:
                     book = file_object.read()
                     self.speak("""From the Gospel of the Flying Spaghetti Monster,
                     I'd really rather you didn't, number """
-                               + str(a))
+                               + str(1))
                     self.speak(book)
                 i = i + 1
         else:
