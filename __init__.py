@@ -26,11 +26,12 @@ class Religion(MycroftSkill):
                     require('irrud'))
     def handle_irrud(self, message):
         a = random.randint(1, 8)
-        a = self.get_response('What verse would you like to hear')
+        a = self.get_response('What verse would you like to hear?')
         with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
-            self.speak("From the Gospel of the Flying Spaghetti Monster, IRRUD"
+            self.speak("""From the Gospel of the Flying Spaghetti Monster,
+            I'd really rather you didn't"""
                        + str(a))
             self.speak(book)
 
