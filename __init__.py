@@ -26,6 +26,7 @@ class Religion(MycroftSkill):
                     require('irrud'))
     def handle_irrud(self, message):
         a = random.randint(1, 8)
+        a = self.get_response('ask.verse.number')
         with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
