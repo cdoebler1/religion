@@ -26,9 +26,11 @@ class Religion(MycroftSkill):
     @intent_handler(IntentBuilder('ReciteIRRUD').require('recite').
                     require('irrud'))
     def handle_irrud(self, message):
-        a = random.randint(1, 8)
         a = self.get_response('What verse would you like to hear?')
-        a = w2n.word_to_num(a)
+        try:
+            a = w2n.word_to_num(a)
+        except Exception:
+            a = random.randint(1, 8)
         with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
