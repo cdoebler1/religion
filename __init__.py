@@ -30,12 +30,12 @@ class Religion(MycroftSkill):
         if a == "all" or a == "everything":
             i = 1
             while i < 9:
-                with open('skills/religion.cdoebler1/pasta/irrud_' + str(1)
+                with open('skills/religion.cdoebler1/pasta/irrud_' + str(i)
                           + '.txt') as file_object:
                     book = file_object.read()
                     self.speak("""From the Gospel of the Flying Spaghetti Monster,
                     I'd really rather you didn't, number """
-                               + str(1))
+                               + str(i))
                     self.speak(book)
                 i = i + 1
         else:
