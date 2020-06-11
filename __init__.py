@@ -17,7 +17,7 @@ class Religion(MycroftSkill):
     def handle_ddc(self, message):
         self.speak_dialog('intro')
         a = random.randint(1, 15)
-        with open('skills/religion.cdoebler1/dudeism/ddc_' + str(a)
+        with open('skills/winston-religion.cdoebler1/dudeism/ddc_' + str(a)
                   + '.txt') as file_object:
             book = file_object.read()
             self.speak("From the Dude de Ching, Verse " + str(a))
@@ -30,7 +30,7 @@ class Religion(MycroftSkill):
         if a == "all" or a == "everything":
             i = 1
             while i < 9:
-                with open('skills/religion.cdoebler1/pasta/irrud_' + str(i)
+                with open('skills/winston-religion.cdoebler1/pasta/irrud_' + str(i)
                           + '.txt') as file_object:
                     book = file_object.read()
                     self.speak("""From the Gospel of the Flying Spaghetti Monster,
@@ -45,7 +45,7 @@ class Religion(MycroftSkill):
                 a = random.randint(1, 8)
             if a < 1 or a > 8:
                 a = random.randint(1, 8)
-            with open('skills/religion.cdoebler1/pasta/irrud_' + str(a)
+            with open('skills/winston-religion.cdoebler1/pasta/irrud_' + str(a)
                       + '.txt') as file_object:
                 book = file_object.read()
                 self.speak("""From the Gospel of the Flying Spaghetti Monster,
